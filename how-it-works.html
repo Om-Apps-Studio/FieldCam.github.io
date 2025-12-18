@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works – FieldCam</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .workflow-step:nth-child(even) { flex-direction: row-reverse; }
+        .workflow-icon {
+            flex: 0 0 150px;
+            height: 150px;
+            background: var(--hero-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary);
+            border: 4px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera"></i> FieldCam
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li><a href="qa.html">Q&A</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 style="text-align: center; margin-bottom: 4rem;">Simple, Secure Workflow</h1>
+
+            <div class="workflow-step">
+                <div class="workflow-icon"><i class="fas fa-camera-retro"></i></div>
+                <div class="step-content">
+                    <div class="step-number">01</div>
+                    <h2>Capture</h2>
+                    <p>Open FieldCam and capture a photo or video. All necessary permissions (Camera, Location) are handled securely.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-icon"><i class="fas fa-stamp"></i></div>
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <h2>Stamp & Verify</h2>
+                    <p>The app automatically calculates a SHA-256 hash and generates an encrypted QR code. Metadata is visually stamped and embedded into the file header.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-icon"><i class="fas fa-folder-open"></i></div>
+                <div class="step-content">
+                    <div class="step-number">03</div>
+                    <h2>Store & Organize</h2>
+                    <p>Files are saved locally in structured folders (Pictures/FieldCam/YYYY-MM/Category). No data ever leaves your device unless you share it.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-icon"><i class="fas fa-check-double"></i></div>
+                <div class="step-content">
+                    <div class="step-number">04</div>
+                    <h2>Verify Anytime</h2>
+                    <p>Anyone with the photo can scan the embedded QR code using FieldCam or a standard scanner to verify its date, time, location, and authenticity.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-icon"><i class="fas fa-share-nodes"></i></div>
+                <div class="step-content">
+                    <div class="step-number">05</div>
+                    <h2>Share or Export</h2>
+                    <p>Send photos directly via WhatsApp or email, or export comprehensive PDF/KML reports for your clients or management.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FieldCam App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

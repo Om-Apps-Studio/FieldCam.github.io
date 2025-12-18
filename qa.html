@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A – FieldCam</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera"></i> FieldCam
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="qa.html" class="active">Q&A</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h1>Public Q&A</h1>
+                <p>Learn from the community or ask your own questions about FieldCam.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 1fr 2fr;">
+                <!-- Ask Question Form -->
+                <div>
+                    <div class="card">
+                        <h3>Ask a Question</h3>
+                        <form id="qaForm" style="margin-top: 1.5rem;">
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display: block; margin-bottom: 0.5rem;">Name (optional)</label>
+                                <input type="text" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text);">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display: block; margin-bottom: 0.5rem;">Category</label>
+                                <select style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text);">
+                                    <option>General</option>
+                                    <option>Security</option>
+                                    <option>Gallery</option>
+                                    <option>Export</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display: block; margin-bottom: 0.5rem;">Question</label>
+                                <textarea rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text);" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Question</button>
+                        </form>
+                        <p id="formFeedback" style="margin-top: 1rem; color: var(--primary); display: none; text-align: center;">Question submitted for moderation!</p>
+                    </div>
+                </div>
+
+                <!-- Q&A List -->
+                <div id="qaList">
+                    <div class="qa-item">
+                        <span class="qa-tag">Security</span>
+                        <div class="qa-question">Does FieldCam store my photos on its servers?</div>
+                        <div class="qa-answer">No. FieldCam is an offline-first app. Your photos and videos are stored locally on your device in the Pictures/FieldCam and Movies/FieldCam folders. We have no servers to store your media.</div>
+                        <small style="color: var(--text-muted);">Dec 15, 2025</small>
+                    </div>
+
+                    <div class="qa-item">
+                        <span class="qa-tag">General</span>
+                        <div class="qa-question">Can I use FieldCam without a GPS signal?</div>
+                        <div class="qa-answer">Yes, you can still capture photos. The app will use your last known location or device time. However, the GPS verification badge will indicate that coordinates are missing.</div>
+                        <small style="color: var(--text-muted);">Dec 12, 2025</small>
+                    </div>
+
+                    <div class="qa-item">
+                        <span class="qa-tag">Export</span>
+                        <div class="qa-question">Is the PDF report customizable?</div>
+                        <div class="qa-answer">Currently, you can choose which photos to include and add a project name. We are working on adding custom logos and header information for organizational reports in the next update.</div>
+                        <small style="color: var(--text-muted);">Dec 10, 2025</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('qaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.reset();
+            document.getElementById('formFeedback').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('formFeedback').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 FieldCam App. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
